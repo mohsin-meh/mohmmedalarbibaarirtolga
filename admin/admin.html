@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>لوحة التحكم</title>
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <header>
+    <h1>لوحة إدارة الموقع</h1>
+    <button onclick="window.location.href='login.html'">خروج</button>
+  </header>
+
+  <div class="container">
+    <button id="show-form" class="add-btn">➕ أضف خبر جديد</button>
+
+    <form id="news-form" style="display:none;">
+      <input id="title" type="text" placeholder="عنوان الخبر" required>
+      <textarea id="content" placeholder="محتوى الخبر" required></textarea>
+      <label>صورة (اختياري)</label>
+      <input id="image" type="file" accept="image/*">
+      <button type="button" onclick="submitNews()">نشر</button>
+    </form>
+
+    <div id="news-table"></div>
+  </div>
+
+  <script src="../scripts/admin.js"></script>
+</body>
+</html>
